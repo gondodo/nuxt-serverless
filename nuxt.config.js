@@ -40,6 +40,9 @@ module.exports = {
         .map((rule) => rule.options.loaders = { ts: tsLoader })
     },
   },
+  router: {
+    base: '/dev/'
+  },
   render: {
     etag: false,
     // Disabled compression

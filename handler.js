@@ -21,7 +21,10 @@ app.use('/static', (req, res) => (
 ))
 
 app.use((req, res) => (
-  setTimeout(() => nuxt.render(req, res), 0)
+  setTimeout(() => {
+    req.url = `${nuxtConfig.router.base}${req.url}`.replace('//', '/')
+    nuxt.render(req, res)}
+  , 0)
 ))
 
 exports.render = serverless(app)

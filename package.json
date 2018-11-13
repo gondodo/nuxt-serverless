@@ -8,8 +8,8 @@
     "build": "cross-env NODE_ENV=production nuxt build",
     "start": "nuxt start",
     "sls:local": "sls offline",
-    "sls:create": "npm run build && sls create_domain && sls deploy",
-    "sls:delete": "sls remove && sls delete_domain",
+    "sls:create": "npm run build && sls deploy",
+    "sls:delete": "sls remove",
     "sls:deploy": "npm run build && sls deploy"
   },
   "repository": {
@@ -35,7 +35,6 @@
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
     "serverless": "^1.32.0",
-    "serverless-domain-manager": "^2.6.5",
     "serverless-offline": "^3.29.0",
     "serverless-s3-sync": "^1.7.0",
     "ts-loader": "^5.2.2",
