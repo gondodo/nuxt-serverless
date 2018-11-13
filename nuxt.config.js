@@ -11,7 +11,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt Serverless Template' },
     ],
     link: [
-      { rel: 'icon', href: '/static/favicon.ico' },
+      { rel: 'icon', href: '/dev/static/favicon.ico' },
     ],
   },
   extensions: ['js', 'ts'],

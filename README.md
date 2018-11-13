@@ -1,4 +1,5 @@
-# 🚀 Nuxt.js SSR on AWS Serverless Stack (Lambda + API Gateway + S3)
+# 🚀 Nuxt.js SSR on AWS Serverless Stack (Lambda + API Gateway)
+~~# 🚀 Nuxt.js SSR on AWS Serverless Stack (Lambda + API Gateway + S3)~~
 
 Nuxt.js Serverless Server-side Rendering Starter on AWS Serverless Stack (Lambda + API Gateway + S3) with *Serverless Framework*
 
@@ -38,25 +39,13 @@ provider:
   region: ap-northeast-2 # 2. Edit AWS region name
   environment:
     NODE_ENV: production
-    BUCKET_NAMESPACE: mybucket  # 3. Specify a new AWS S3 bucket namespace for bundled assets and static assets (should be unique)
-    ASSETS_BUCKET_NAME: ${self:provider.environment.BUCKET_NAMESPACE}-assets-${opt:stage, 'dev'}
-    STATIC_BUCKET_NAME: ${self:provider.environment.BUCKET_NAMESPACE}-static-${opt:stage, 'dev'}
-    ASSETS_BUCKET_URL: https://s3.${self:provider.region}.amazonaws.com/${self:provider.environment.ASSETS_BUCKET_NAME}
-    STATIC_BUCKET_URL: https://s3.${self:provider.region}.amazonaws.com/${self:provider.environment.STATIC_BUCKET_NAME}
 
 custom:
-  customDomain:
-    domainName: service.mydomain.io  # 4. Specify a new domain name to be created
-    stage: ${opt:stage, 'dev'}
-    certificateName: mydomain.io  # 5. Enter the certificate name in AWS Certificate Manager (us-east-1) for https connection
-    createRoute53Record: true
   serverless-offline:
     port: 4000
-  s3Sync:
-    - bucketName: ${self:provider.environment.ASSETS_BUCKET_NAME}
-      localDir: .nuxt/dist/client
-    - bucketName: ${self:provider.environment.STATIC_BUCKET_NAME}
-      localDir: static
+  apigwBinary:
+    types:
+      - '*/*'
 ```
 
 ## Build Setup

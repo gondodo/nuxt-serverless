@@ -23,20 +23,20 @@
   },
   "homepage": "https://github.com/jeehyukwon/nuxt-serverless#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.3",
+    "aws-serverless-express": "^3.3.5",
     "express": "^4.16.4",
     "nuxt": "^2.2.0",
     "nuxt-property-decorator": "^1.2.0",
-    "serverless-http": "^1.7.2",
     "vuex-class": "^0.3.1"
   },
   "devDependencies": {
+    "cookie-parser": "^1.4.3",
     "cross-env": "^5.2.0",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
     "serverless": "^1.32.0",
+    "serverless-apigw-binary": "^0.4.4",
     "serverless-offline": "^3.29.0",
-    "serverless-s3-sync": "^1.7.0",
     "ts-loader": "^5.2.2",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
