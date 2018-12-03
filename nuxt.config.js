@@ -47,5 +47,23 @@ module.exports = {
     etag: false,
     // Disabled compression
     compressor: { threshold: Infinity },
-  }
+  },
+  modules: [
+    '@nuxtjs/pwa',
+  ],
+  manifest: {
+    name: 'Nuxt.js+TypeScriptアプリをPWA化する',
+    lang: 'ja',
+    start_url: '/dev/',
+    icons: [
+      {
+        src: "static/icon.png",
+        sizes: "512x512",
+        type: "image/png",
+      }
+    ]
+  },
+  workbox: {
+    swDest: 'static/sw.js',
+  },
 }

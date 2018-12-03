@@ -22,7 +22,7 @@ package:
     - serverless.yml
 
 functions:
-  nuxt-renderer:
+  nuxt-renderer-test:
     handler: handler.render
     memorySize: 512
     timeout: 30

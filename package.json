@@ -23,8 +23,9 @@
   },
   "homepage": "https://github.com/jeehyukwon/nuxt-serverless#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.3",
+    "@nuxtjs/pwa": "^2.6.0",
     "aws-serverless-express": "^3.3.5",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "nuxt": "^2.2.0",
     "nuxt-property-decorator": "^1.2.0",

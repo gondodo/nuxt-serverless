@@ -11,6 +11,8 @@ app.use('/_nuxt', express.static(path.join(__dirname, '.nuxt', 'dist', 'client')
 
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
+app.use('/sw.js', express.static(path.join(__dirname, 'static', 'sw.js')))
+
 let config = require('./nuxt.config.js')
 const nuxt = new Nuxt(config)
 
