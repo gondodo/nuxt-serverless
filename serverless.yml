@@ -7,7 +7,7 @@ provider:
   region: ap-northeast-1 # 2. Edit AWS region name
   environment:
     NODE_ENV: production
-
+    HOGE: ${env:HOGE}
 custom:
   serverless-offline:
     port: 4000
@@ -39,3 +39,4 @@ functions:
 plugins:
   - serverless-offline
   - serverless-apigw-binary
+  - serverless-dotenv-plugin

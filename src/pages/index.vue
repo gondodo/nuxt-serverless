@@ -1,5 +1,6 @@
 <template>
   <div class="page-index">
+    {{hoge}}
     <h1>Nuxt Serverless Template {{ this.version }}</h1>
     <p>{{ message }}</p>
     <nuxt-link to="/typescript">typescript</nuxt-link>
@@ -13,6 +14,10 @@ import { State } from 'vuex-class'
 
 @Component
 export default class PageIndex extends Vue {
+
+  private get hoge(): string {
+    return process.env.HOGE;
+  }
   /**
    * You can fetch data from remote server with 'asyncData()' method
    */

@@ -1,5 +1,6 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
+// require('dotenv').config()
 
 module.exports = {
   srcDir: 'src',
@@ -47,5 +48,11 @@ module.exports = {
     etag: false,
     // Disabled compression
     compressor: { threshold: Infinity },
-  }
+  },
+  modules: [
+    '@nuxtjs/dotenv',
+  ],
+  env: {
+    HOGE: process.env.HOGE,
+  },
 }
